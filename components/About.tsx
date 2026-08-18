@@ -22,7 +22,7 @@ const stats = [
   },
   {
     icon: Users,
-    number: "15+",
+    number: "20+",
     text: "Global Clients",
   },
   {
