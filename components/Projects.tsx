@@ -37,53 +37,58 @@ const projects = [
     },
 
   {
-    title: "AI Customer Support Platform",
+      title: "SaaS-Automation Platform",
 
-    category: "AI Engineering",
+    category: "Investment Management Platform",
 
     description:
-      "LLM-powered customer support platform using RAG architecture, vector search and automated AI workflows.",
+      "Modern investment management platform for venture capital and private equity teams to manage deal flow, portfolios, investors, CRM, reporting and investment workflows.",
 
     image: "/project2.png",
 
     tags: [
+      "Next.js",
       "React",
-      "Python",
-      "FastAPI",
-      "OpenAI",
-      "LangChain",
-      "Docker",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
     ],
 
     github: "#",
-    demo: "#",
+    demo: "https://jj-zapflow.vercel.app",
 
     featured: true,
   },
 
   {
-    title: "Cloud Infrastructure Dashboard",
+    title: "Zerp - Modular ERP & Business Management Platform",
 
-    category: "DevOps • Monitoring",
+    category: "ERP / SaaS",
 
     description:
-      "Real-time infrastructure monitoring dashboard with distributed services, metrics visualization and scalable backend systems.",
+      "Modern open-source ERP and SaaS platform built to manage complete business operations, including CRM, HRM, accounting, inventory, sales, purchasing, projects, POS, AI assistance, and workflow automation through a modular and scalable architecture.",
 
-    image: "/project3.png",
+    image: "/zerp.png",
 
     tags: [
+      "Laravel",
+      "PHP",
       "React",
-      "GraphQL",
+      "TypeScript",
+      "Inertia.js",
+      "MySQL",
+      "REST API",
+      "Tailwind CSS",
+      "Docker",
       "Redis",
-      "Kubernetes",
-      "AWS",
     ],
 
-    github: "#",
-    demo: "#",
+    github: "https://github.com/zerp-pk/zerp",
 
-    featured: false,
-  },
+    live: "https://zerp.pk/",
+  }
 ];
 
 export default function Projects() {
