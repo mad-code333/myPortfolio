@@ -11,35 +11,35 @@ import {
 import Reveal from "./Reveal";
 
 const projects = [
-    {
+  {
     title: "EverShop E-commerce Platform",
 
     category: "FULL STACK • E-COMMERCE",
 
     description:
-        "Open-source e-commerce platform with product management, shopping cart, checkout, payments, orders and a customizable admin dashboard.",
+      "Open-source e-commerce platform with product management, shopping cart, checkout, payments, orders and a customizable admin dashboard.",
 
     image: "/project1.png",
 
     tags: [
-        "Node.js",
-        "TypeScript",
-        "React",
-        "GraphQL",
-        "PostgreSQL",
-        "Tailwind CSS",
+      "Node.js",
+      "TypeScript",
+      "React",
+      "GraphQL",
+      "PostgreSQL",
+      "Tailwind CSS",
     ],
 
     github: "#",
     demo: "https://evershop.io",
 
     featured: true,
-    },
+  },
 
   {
-      title: "SaaS-Automation Platform",
+    title: "SaaS-Automation Platform",
 
-    category: "Investment Management Platform",
+    category: "INVESTMENT MANAGEMENT PLATFORM",
 
     description:
       "Modern investment management platform for venture capital and private equity teams to manage deal flow, portfolios, investors, CRM, reporting and investment workflows.",
@@ -65,7 +65,7 @@ const projects = [
   {
     title: "Zerp - Modular ERP & Business Management Platform",
 
-    category: "ERP / SaaS",
+    category: "ERP / SAAS",
 
     description:
       "Modern open-source ERP and SaaS platform built to manage complete business operations, including CRM, HRM, accounting, inventory, sales, purchasing, projects, POS, AI assistance, and workflow automation through a modular and scalable architecture.",
@@ -86,9 +86,10 @@ const projects = [
     ],
 
     github: "https://github.com/zerp-pk/zerp",
+    demo: "https://zerp.pk/",
 
-    live: "https://zerp.pk/",
-  }
+    featured: false,
+  },
 ];
 
 export default function Projects() {
@@ -96,7 +97,7 @@ export default function Projects() {
     <section
       id="projects"
       className="
-        max-w-6xl
+        max-w-7xl
         mx-auto
         px-6
         py-16
@@ -113,8 +114,9 @@ export default function Projects() {
         <div
           className="
             flex
-            justify-between
             items-end
+            justify-between
+            gap-6
             mb-8
           "
         >
@@ -151,10 +153,11 @@ export default function Projects() {
           <a
             href="#"
             className="
+              shrink-0
               text-xs
               text-gray-400
               hover:text-white
-              transition
+              transition-colors
             "
           >
             View all →
@@ -163,15 +166,17 @@ export default function Projects() {
 
 
         {/* =========================
-            PROJECT GRID
+            FLEXIBLE PROJECT GRID
         ========================== */}
 
         <div
           className="
             grid
-            md:grid-cols-2
-            lg:grid-cols-3
+            grid-cols-1
+            sm:grid-cols-2
+            xl:grid-cols-3
             gap-5
+            items-stretch
           "
         >
 
@@ -192,7 +197,7 @@ export default function Projects() {
 
               viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0.15,
               }}
 
               transition={{
@@ -207,6 +212,9 @@ export default function Projects() {
               className="
                 group
                 relative
+                flex
+                flex-col
+                h-full
                 overflow-hidden
                 rounded-2xl
                 border
@@ -222,18 +230,18 @@ export default function Projects() {
             >
 
               {/* =========================
-                  IMAGE
+                  FLEXIBLE IMAGE
               ========================== */}
 
               <div
                 className="
                   relative
-                  h-52
-                  md:h-56
+                  w-full
+                  aspect-video
                   overflow-hidden
+                  shrink-0
                 "
               >
-
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -241,8 +249,8 @@ export default function Projects() {
                   priority={index === 0}
 
                   sizes="
-                    (max-width: 768px) 100vw,
-                    (max-width: 1024px) 50vw,
+                    (max-width: 640px) 100vw,
+                    (max-width: 1280px) 50vw,
                     33vw
                   "
 
@@ -251,11 +259,11 @@ export default function Projects() {
                     transition-transform
                     duration-700
                     ease-out
-                    group-hover:scale-110
+                    group-hover:scale-105
                   "
                 />
 
-                {/* Dark Overlay */}
+                {/* Image Overlay */}
 
                 <div
                   className="
@@ -268,8 +276,7 @@ export default function Projects() {
                   "
                 />
 
-
-                {/* Purple Hover Glow */}
+                {/* Hover Glow */}
 
                 <div
                   className="
@@ -282,11 +289,9 @@ export default function Projects() {
                   "
                 />
 
-
-                {/* Featured */}
+                {/* Featured Badge */}
 
                 {project.featured && (
-
                   <div
                     className="
                       absolute
@@ -306,9 +311,7 @@ export default function Projects() {
                   >
                     Featured
                   </div>
-
                 )}
-
               </div>
 
 
@@ -316,7 +319,14 @@ export default function Projects() {
                   CONTENT
               ========================== */}
 
-              <div className="p-5">
+              <div
+                className="
+                  flex
+                  flex-col
+                  flex-1
+                  p-5
+                "
+              >
 
                 {/* Category */}
 
@@ -339,10 +349,11 @@ export default function Projects() {
                   className="
                     text-lg
                     font-semibold
+                    leading-snug
                     text-white
                     mb-2
                     group-hover:text-purple-300
-                    transition
+                    transition-colors
                   "
                 >
                   {project.title}
@@ -356,8 +367,7 @@ export default function Projects() {
                     text-xs
                     text-gray-400
                     leading-relaxed
-                    mb-4
-                    line-clamp-3
+                    mb-5
                   "
                 >
                   {project.description}
@@ -365,23 +375,25 @@ export default function Projects() {
 
 
                 {/* =========================
-                    TAGS
+                    FLEXIBLE TECH STACK
                 ========================== */}
 
                 <div
                   className="
                     flex
                     flex-wrap
+                    items-center
                     gap-1.5
-                    mb-5
+                    mb-6
                   "
                 >
-
                   {project.tags.map((tag) => (
-
                     <span
                       key={tag}
                       className="
+                        inline-flex
+                        items-center
+                        whitespace-nowrap
                         px-2.5
                         py-1
                         rounded-full
@@ -392,35 +404,42 @@ export default function Projects() {
                         text-gray-300
                         hover:border-purple-400/40
                         hover:text-purple-200
-                        transition
+                        transition-colors
                       "
                     >
                       {tag}
                     </span>
-
                   ))}
-
                 </div>
 
 
                 {/* =========================
                     BUTTONS
+                    ALWAYS ONE ROW
                 ========================== */}
 
-                <div className="flex gap-2">
+                <div
+                  className="
+                    flex
+                    items-center
+                    gap-2
+                    mt-auto
+                    pt-1
+                  "
+                >
 
-                  {/* GitHub */}
+                  {/* Code */}
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-
                     className="
-                      flex
+                      inline-flex
                       items-center
                       justify-center
                       gap-2
+                      whitespace-nowrap
                       px-3.5
                       py-2
                       rounded-lg
@@ -434,7 +453,7 @@ export default function Projects() {
                       transition-all
                     "
                   >
-                    <FaGithub />
+                    <FaGithub size={12} />
 
                     Code
                   </a>
@@ -446,12 +465,12 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-
                     className="
-                      flex
+                      inline-flex
                       items-center
                       justify-center
                       gap-2
+                      whitespace-nowrap
                       px-3.5
                       py-2
                       rounded-lg
@@ -464,7 +483,7 @@ export default function Projects() {
                       transition-all
                     "
                   >
-                    <FaExternalLinkAlt />
+                    <FaExternalLinkAlt size={11} />
 
                     Live
                   </a>
