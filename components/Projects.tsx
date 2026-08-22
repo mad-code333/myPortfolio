@@ -148,7 +148,7 @@ export default function Projects() {
         max-w-7xl
         mx-auto
         px-6
-        py-16
+        py-25
         border-t
         border-white/10
       "
