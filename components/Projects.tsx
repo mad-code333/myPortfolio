@@ -122,7 +122,7 @@ const projects = [
   description:
     "SaaS platform for sneaker and collectibles resellers with multi-marketplace price tracking, inventory management, real-time P&L analytics, smart price alerts, AI-powered buy/sell/hold insights and tax report generation.",
 
-  image: "/project2.png",
+  image: "/project3.png",
 
   tags: [
     "React",
