@@ -90,6 +90,54 @@ const projects = [
 
     featured: false,
   },
+  {
+  title: "AI Receptionist Platform",
+
+  category: "AI • FULL STACK • SAAS",
+
+  description:
+    "AI-powered digital receptionist platform that answers customer questions using business documents, provides 24/7 customer support, and enables seamless appointment booking through calendar integrations.",
+
+  image: "/chat.png",
+
+  tags: [
+    "Next.js",
+    "TypeScript",
+    "Python",
+    "OpenAI",
+    "LangChain",
+    "PostgreSQL",
+  ],
+
+  github: "#",
+  demo: "https://chat.leverlabs.co",
+
+  featured: true,
+  },
+  {
+  title: "FlipTrack Reseller Platform",
+
+  category: "FULL STACK • SAAS • E-COMMERCE",
+
+  description:
+    "SaaS platform for sneaker and collectibles resellers with multi-marketplace price tracking, inventory management, real-time P&L analytics, smart price alerts, AI-powered buy/sell/hold insights and tax report generation.",
+
+  image: "/project2.png",
+
+  tags: [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Supabase",
+    "PostgreSQL",
+    "OpenAI",
+  ],
+
+  github: "#",
+  demo: "https://fliptrack-psi.vercel.app/",
+
+  featured: true,
+  },
 ];
 
 export default function Projects() {
