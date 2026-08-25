@@ -161,7 +161,31 @@ const projects = [
   demo: "https://personal-banking.vercel.app/",
 
   featured: true,
-},
+  },
+  {
+  title: "Tuturuuu Productivity Platform",
+
+  category: "FULL STACK • SAAS • PRODUCTIVITY",
+
+  description:
+    "Full-stack productivity and collaboration platform designed to help teams and individuals manage work, organize projects, collaborate efficiently, and centralize important workflows in one modern workspace. The platform combines task management, workspace organization, team collaboration, productivity tools, and data-driven features within a responsive and scalable web application.",
+
+  image: "/project5.png",
+
+  tags: [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Supabase",
+    "PostgreSQL",
+    "AI",
+  ],
+
+  github: "#",
+  demo: "https://tuturuuu.com/",
+
+  featured: true,
+  },
 ];
 
 export default function Projects() {
