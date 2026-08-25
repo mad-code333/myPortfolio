@@ -138,6 +138,30 @@ const projects = [
 
   featured: true,
   },
+  {
+  title: "Personal Banking & Finance Platform",
+
+  category: "FULL STACK • FINTECH • SAAS",
+
+  description:
+    "Modern personal finance platform designed to help users manage accounts, track income and expenses, monitor transactions, analyze spending patterns, and gain clear insights into their financial health. The platform provides interactive dashboards, budgeting tools, transaction management, financial analytics, and a responsive experience across desktop and mobile.",
+
+  image: "/project4.png",
+
+  tags: [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Supabase",
+    "PostgreSQL",
+    "Financial Analytics",
+  ],
+
+  github: "#",
+  demo: "https://personal-banking.vercel.app/",
+
+  featured: true,
+},
 ];
 
 export default function Projects() {
